@@ -1,0 +1,25 @@
+@startuml
+
+class BeefBurger{
+    String description
+    + double price()
+}
+
+class Butter{
+    - MashedPotato mash
+    Butter(MashedPotato mash)
+    + String getDescription()
+    + double price()
+}
+
+class Chicken{
+
+    Chicken()
+    double price()
+}
+
+Plate-->Chicken
+
+
+
+@enduml
