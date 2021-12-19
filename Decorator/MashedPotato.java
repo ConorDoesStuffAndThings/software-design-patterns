@@ -3,7 +3,10 @@ public class MashedPotato extends DinnerDecorator{
     private Plate plate;
 
     MashedPotato(Plate plate){
-        this.plate = plate;
+
+    }
+
+    public MashedPotato() {
     }
 
     public String getDescription() {
