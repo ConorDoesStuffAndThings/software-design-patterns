@@ -30,8 +30,5 @@ public class PickyPlate extends Plate{
         }
     }
 
-    @Override
-    public double price() {
-        return 0;
-    }
+
 }

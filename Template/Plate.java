@@ -33,15 +33,7 @@ abstract class Plate {
         return true;
     }
 
-    String description = "Plate";
-
-    String getDescription(){
-        return description;
-    }
-
     public void servePlate(){
         System.out.print("\nThe plate is served!\n\n");
     }
-
-    public abstract double price();
 }

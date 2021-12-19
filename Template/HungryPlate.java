@@ -6,7 +6,7 @@ public class HungryPlate extends Plate{
 
     @Override
     void addMeat() {
-        System.out.println("\nThe meat on the plate is: \n");
+        System.out.println("\nThe meat on the plate is: ");
 
         for(String m: meatOnPlate){
             System.out.print(m + " \n");
@@ -27,12 +27,8 @@ public class HungryPlate extends Plate{
         System.out.println("\nThe sides on the plate are: ");
 
         for(String s: sidesOnPlate){
-            System.out.print(s + " ");
+            System.out.print(s + ", ");
         }
     }
 
-    @Override
-    public double price() {
-        return 0;
-    }
 }
