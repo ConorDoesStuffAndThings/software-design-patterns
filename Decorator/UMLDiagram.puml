@@ -1,0 +1,102 @@
+@startuml
+skinparam classAttributeIconSize 0
+
+class BeefBurger{
+    description:String
+    + double price()
+}
+
+class Butter{
+    - mash:MashedPotato
+    Butter(mash:MashedPotato)
+    + String getDescription()
+    + double price()
+}
+
+class Chicken{
+
+    Chicken()
+    double price()
+}
+
+abstract class Plate{
+    String description
+    String getDescription()
+}
+
+abstract class DinnerDecorator{
+    + abstract String getDescription()
+}
+
+abstract class MashDecorator{
+    + abstract String getDescription()
+}
+
+class Chips{
+    - plate:Plate
+    Chips(plate:Plate)
+    String getDescription()
+   double price()
+}
+
+class Cream{
+    + mash:MashedPotato
+    String getDescription
+}
+
+class MashedPotato{
+    -plate:Plate
+    MashedPotato(plate:Plate)
+    +String getDescription()
+    +double price()
+}
+
+class Pepper{
+    - mash:MashedPotato
+    Pepper(mash:MashedPotato)
+    +String getDescription()
+    +double price()
+}
+
+class RoastPotato{
+    - plate:Plate
+    RoastPotato(plate:Plate)
+    +String getDescription()
+    +double price()
+}
+
+class Salmon{
+    description:String
+    + double price()
+}
+
+class Salt{
+    - mash:MashedPotato
+     Salt(mash:MashedPotato)
+     +String getDescription()
+     +double price()
+}
+
+class Steak{
+    description:String
+    + double price()
+}
+
+Plate<--Chicken
+Plate<-- DinnerDecorator
+Plate<--BeefBurger
+Plate<--Salmon
+Plate<--Steak
+MashDecorator<--Butter
+MashDecorator<--Cream
+MashDecorator<--Pepper
+MashDecorator<--Salt
+DinnerDecorator<--MashDecorator
+DinnerDecorator<--Chips
+DinnerDecorator<--MashedPotato
+DinnerDecorator<-- RoastPotato
+
+
+
+
+@enduml
